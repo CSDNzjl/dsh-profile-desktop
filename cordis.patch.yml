@@ -1,0 +1,72 @@
+# Your patch layer for this dsh profile, applied after every bundle layer:
+# a top-level YAML array of loader patch entries (id-targeted config
+# overrides, disables, and insert lists; `!!js` expressions allowed).
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: opencode-go
+    model: deepseek-v4.1-flash
+- id: ui-settings-account
+  name: "@deepseek-ai/dsh-client-ui-settings-account"
+  config:
+    version: 1
+    step: done
+    purpose: development
+    process: standard
+    completion: completed
+    usage: detailed
+    developerTools: true
+- id: ui-chat
+  name: "@deepseek-ai/dsh-client-ui-chat"
+  config:
+    transcriptView: standard
+    performanceUsage: detailed
+- id: ui-settings
+  name: "@deepseek-ai/dsh-client-ui-settings"
+  config:
+    enabled: true
+- id: llm-pi-ai
+  name: "@deepseek-ai/dsh-llm-pi-ai"
+  config:
+    providers:
+      opencode-go:
+        apiKeyEnv: OPENCODE_GO_API_KEY
+- id: plugin-market
+  name: "@deepseek-ai/dsh-plugin-market"
+  config:
+    indexes:
+      - https://cdn.jsdelivr.net/gh/AAAMECHANIC/dsh-plugin-market@main/index.json
+- id: ui-settings-general
+  name: "@deepseek-ai/dsh-client-ui-settings-general"
+  config:
+    welcomeNoticeVersion: 2026-09-28.1
+- id: session-log-deepseek
+  name: "@deepseek-ai/dsh-session-log-deepseek"
+  config:
+    enabled: false
+- id: permission
+  name: "@deepseek-ai/dsh-permission-presets"
+  config:
+    presets:
+      read-only:
+        sandbox: read-only
+        approval: ask
+      workspace-write:
+        sandbox: workspace-write
+        approval: ask
+      danger-full-access:
+        sandbox: danger-full-access
+        approval: never
+    defaultPreset: danger-full-access
+- id: ui-theme
+  name: "@deepseek-ai/dsh-client-ui-theme"
+  config:
+    preference: system
+# dsh-remote：关掉自更新。它的 updateMode: auto 会在启动时就地覆盖自己的包文件，
+# 使 node_modules 里的版本与 package.json/lockfile 的完整性哈希不一致，导致下次启动
+# 加载失败（enabled:false / fiberPhase:null）。升级请手动改 package.json 里的版本号。
+- id: dsh-remote
+  name: dsh-remote
+  config:
+    updateMode: off
+  disabled: false

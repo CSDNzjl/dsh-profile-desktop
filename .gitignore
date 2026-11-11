@@ -1,0 +1,29 @@
+# ── 敏感信息：绝不提交 ──────────────────────────────
+.credentials.yaml
+machines.json
+remote-workspaces/
+dsh-pocket/
+token
+token-lan
+*.key
+*.pem
+.env
+.env.*
+
+# ── 运行时产物 ─────────────────────────────────────
+node_modules/
+.pnpm-store/
+*.bak
+*.log
+logs/
+
+# ── 会话数据（体积大，含对话内容）─────────────────
+sessions/
+storages/
+session_projcache/
+
+# ── 编辑器/系统 ────────────────────────────────────
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

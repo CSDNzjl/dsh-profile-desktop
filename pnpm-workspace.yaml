@@ -1,0 +1,7 @@
+packages:
+  - .
+
+nodeLinker: hoisted
+autoInstallPeers: false
+minimumReleaseAgeExclude:
+  - dsh-remote@0.8.88

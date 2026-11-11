@@ -1,0 +1,36 @@
+{
+  "name": "dsh-profile-desktop",
+  "private": true,
+  "dependencies": {
+    "@deepseek-ai/dsh-experimental-plugin-market-bundle": "0.2.2-rc.1",
+    "@liustack/modlens": "3.27.2",
+    "@xmanrui/dsh-im": "5.8.0",
+    "@ychris12138/dsh-usage-stats": "0.3.7",
+    "@yejiming/dsh-data-agent": "0.2.2",
+    "dsh-bottom-info-bar": "1.21.8",
+    "dsh-delete-sessions": "0.2.2",
+    "dsh-github-mcp": "0.2.0",
+    "dsh-pocket": "2.12.0",
+    "dsh-recall-plugin": "2.5.2",
+    "dsh-remote": "0.8.88"
+  },
+  "dsh": {
+    "profile": {
+      "bundles": [
+        "@deepseek-ai/dsh-base",
+        "@deepseek-ai/dsh-web-app",
+        "@deepseek-ai/dsh-experimental-plugin-market-bundle",
+        "dsh-bottom-info-bar",
+        "@liustack/modlens",
+        "dsh-pocket",
+        "@ychris12138/dsh-usage-stats",
+        "@yejiming/dsh-data-agent",
+        "@xmanrui/dsh-im",
+        "dsh-remote",
+        "dsh-delete-sessions",
+        "dsh-recall-plugin",
+        "dsh-github-mcp"
+      ]
+    }
+  }
+}
